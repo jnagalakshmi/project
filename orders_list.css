@@ -1,0 +1,43 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light grey background */
+    margin:  0;
+    padding:  0;
+}
+
+/* Table styles */
+.main table {
+    margin-top: 2cm;
+    width:  80%; /* Set the width of the table */
+    margin:  1cm, 1cm, 1cm; /* Center the table */
+    border-collapse: collapse; /* Collapse borders */
+    background-color: #ffffff; /* White background */
+}
+
+/* Table header styles */
+th {
+    background-color: #cccccc; /* Grey background for headers */
+    color: #000000; /* Black text */
+    font-weight: bold; /* Bold font */
+    font-size:  0.5cm; /* Font size */
+    border:  1px solid black; /* Black border */
+    padding:  10px; /* Padding around cells */
+    text-align: left; /* Left-aligned text */
+}
+
+/* Table row styles */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Lighter grey for even rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* White for odd rows */
+}
+
+/* Table cell styles */
+td {
+    border:  1px solid black; /* Black border */
+    padding:  10px; /* Padding around cells */
+    text-align: justify; /* Left-aligned text */
+}

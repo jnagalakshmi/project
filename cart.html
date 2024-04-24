@@ -1,0 +1,331 @@
+
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/80d6d976a0.js" crossorigin="anonymous"></script>
+        <style>
+*{
+    margin:  0;
+    padding:  0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: Arial, sans-serif;
+    line-height:  1.6;
+    color: #333;
+}
+.container-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+    
+}
+
+/* Layout */
+.container {
+    max-width:  1200px;
+    margin:  0 auto;
+    padding:  0  15px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    background-color:rgba(215, 215, 215, 0.744);
+    height: 120px;
+    border-radius: 10px;
+    
+    
+    
+}
+.card1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+p,h3{
+    color: black;
+}
+p{
+    margin-right: 10px;
+}
+.name{
+    font-weight: bold;
+}
+.quantity-no{
+    font-weight: bold;
+}
+/* Header */
+.header {
+    background-color: #f8f9fa;
+    padding:  20px  0;
+}
+
+/* Shopping Cart Items */
+.product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom:  20px;
+}
+
+.product-image {
+    width:  100px;
+    height:  100px;
+    object-fit: cover;
+    margin-right:  20px;
+}
+
+.product-details {
+    flex-grow:  1;
+}
+
+.product-title {
+    font-size:  1.2em;
+    font-weight: bold;
+}
+
+.product-size,
+.product-color {
+    font-size:  0.9em;
+    color: #6c757d;
+}
+img{
+    width: 70px;
+    margin-left: 20px;
+   height: 70px;
+    justify-content:cover;
+    border-radius: 10px;
+    margin-top: 23px;
+}
+.product-quantity {
+    display: flex;
+    align-items: center;
+    margin-right:  20px;
+}
+
+.quantity-input {
+    width:  50px;
+    margin:  0  10px;
+}
+
+.product-price {
+    font-size:  1.2em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.remove-item {
+    color: #dc3545;
+    cursor: pointer;
+}
+
+/* Discount Code Input */
+.discount-code {
+    display: flex;
+    align-items: center;
+    margin-bottom:  20px;
+}
+
+.discount-input {
+    flex-grow:  1;
+    margin-right:  10px;
+}
+
+/* Buttons */
+.btn {
+    padding:  10px  20px;
+    border: none;
+    border-radius:  5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    padding:  20px  0;
+    text-align: center;
+}
+.text-danger{
+    padding-right: 40px;
+    color: red;
+   
+}
+i{
+    background: transparent;
+    border: none;
+   
+}
+.click{
+    margin: 3px;
+    padding: 0;
+    background: none;
+    border: none;
+}
+input{
+    width: 30px;
+    
+    justify-content: center;
+}
+input text{
+    text-align: center;
+}
+.pay-proceed{
+    text-align: center;
+    background-color: greenyellow;
+}
+.head{
+    color: #333;
+    margin-top: 30px;
+}
+.products{
+    flex: 2;
+    margin-left: 30px;
+   
+}
+.order-summary{
+    color: #333;
+    flex: 0.5;
+    border-color: rgb(74, 234, 66);
+    border-style: solid;
+   
+    padding-top: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: auto;
+    box-shadow:  0  4px  8px rgba(0,  0,  0,  0.2); 
+    
+}
+.text-danger{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+    margin-right: 15px;
+    width: 20px;
+}
+
+
+.payment-summary-title {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .payment-summary-row {
+    display: grid;
+    /* 1fr auto; means the width of the 2nd column will be
+       determined by the elements inside the column (auto).
+       The 1st column will take up the remaining space. */
+    grid-template-columns: 1fr auto;
+    font-size: 15px;
+    margin-bottom: 9px;
+    font-weight: 300;
+  }
+  
+  .payment-summary-money {
+    text-align: right;
+  }
+  .place-order-button {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 8px;
+    background-color: rgb(74, 234, 66);
+    border: none;
+    cursor: pointer;
+    margin-top: 19px;
+    margin-bottom: 10px;
+  }
+  .quantity{
+    display: flex;
+   
+  }
+
+
+  button {
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.place-order-button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+
+</style>
+
+
+
+
+        </head>
+<body>
+    <section class="h-100">
+        <div class="Logo">
+            <a href="Home Page HTML.html" class="cart">
+
+                <img src="https://i.imgur.com/oRhEAUj.jpg" alt="Er" style="margin-left: 40px;">
+
+            </a>
+        </div>
+        <div class="heading" style="margin-left: 40px;">
+            <h1 class="head" style="margin-bottom: 20px; font-family: Arial, Helvetica, sans-serif;" >Your Cart</h1>
+            
+        </div>
+
+        <div class="container-main">
+            
+        <div class="products">
+            <div class="col-10">
+    
+            
+  
+            </div>
+        </div>
+                <div class="order-summary">
+                    
+                    
+                </div>
+        
+        </div>
+
+    </section>
+
+
+    <script src="cart.js">
+    </script>
+    
+    <script src="cartt.js">
+    </script>
+    
+
+    </body>
+    </html>

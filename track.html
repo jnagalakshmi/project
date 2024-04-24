@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Geolocation</title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+       .Map {
+           width: auto;
+           height:   100vh;
+       }
+
+       .route-details {
+    position: absolute;
+    top:   50px;
+    right:   0;
+    width:   300px;
+    height:   200px;
+    overflow: auto;
+    background-color: #fff;
+    padding:   20px;
+    box-shadow:   0   0   10px rgba(0,   0,   0,   0.1);
+    z-index:  1000;
+    margin:0; /* Ensure this is higher than the z-index of the map */
+}
+        .leaflet-routing-container{
+            width:1px;
+            height: 0px;
+        }
+        p{
+            font-size: medium;
+        }
+	</style>
+
+</head>
+
+<body>
+	<div id="map" class="Map"></div>
+    <div  class="route-details">
+        <h2> Order Track <h2>
+            <p class="distance"></p>
+            <p class="time"></p>
+    </div>
+    </div>
+	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+<script>
+    var map = L.map('map').setView([14, 75], 11);
+	mapLink = "<a href='http://openstreetmap.org'>OpenStreetMap</a>";
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: 'Leaflet © ' + mapLink + ', contribution', maxZoom: 18 }).addTo(map);
+
+	var taxiIcon = L.icon({
+		iconUrl: 'atta.jpg',
+		iconSize: [70, 70]
+	})
+
+	
+    var lat,lng;
+    var lastMarker; // Declare the lastMarker variable here
+    var routeMarker; // Declare a new variable for the route animation
+        map.locate({
+        setView: true, // This will automatically move the map view to the user's location
+        watch: false // This will keep updating the user's location
+    })
+    .on('locationfound', function (e) {
+        lat = e.latlng.lat;    
+        lng = e.latlng.lng;
+
+        // Update the last marker with the current location
+        if (lastMarker) {
+            map.removeLayer(lastMarker);
+        }
+        lastMarker = L.marker([lat, lng], { icon: taxiIcon }).addTo(map);
+        route(e); // Pass the e variable as an argument to the route function
+    })
+    .on('locationerror', function (e) {
+        // Handle errors here
+        console.log("Error occurred: ", e.message);
+        alert("Location access has been denied.");
+    });
+
+    var liveCoords = localStorage.getItem('coords');
+    console.log(liveCoords);
+    var marker = L.marker([20, 30], { icon: taxiIcon }).addTo(map);
+	function route(e) { // Define the route function as a function expression
+		var newMarker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
+		L.Routing.control({
+			waypoints: [
+				L.latLng(lat, lng),
+				L.latLng(14,78 )
+			]
+		}).on('routesfound', function (e) {
+			var routes = e.routes;
+			console.log(routes);
+            var summary = routes[0].summary;
+            var distance = summary.totalDistance /  1000; // Convert meters to kilometers
+            var duration = Math.round(summary.totalTime %  3600 /  60);
+            document.querySelector('.distance').innerHTML = "Distance : " + distance.toFixed(2) + "km";
+            document.querySelector('.time').innerHTML = "Time : "+ duration + "  min";
+			e.routes[0].coordinates.forEach(function (coord, index) {
+				setTimeout(function () {
+                    if(routeMarker){
+                        map.removeLayer(routeMarker);
+                    }
+					routeMarker = L.marker([coord.lat, coord.lng], { icon: taxiIcon }).addTo(map); // Use a different variable for the route animation
+				}, 100 * index)
+			})
+            
+		}).addTo(map);
+        
+    }
+
+
+</script>
+
+
+
+</body>
+
+</html>

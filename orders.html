@@ -1,0 +1,313 @@
+
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/80d6d976a0.js" crossorigin="anonymous"></script>
+        <style>
+*{
+    margin:  0;
+    padding:  0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: Arial, sans-serif;
+    line-height:  1.6;
+    color: #333;
+}
+.container-main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 1;
+    margin-left: 30px;
+    
+}
+
+/* Layout */
+.container {
+    max-width:  1200px;
+    height: 100%;
+    overflow-y: auto;
+    margin:  0 auto;
+    padding:  0  15px;
+}
+.card{
+    display: flex;
+    flex-direction: initial;
+    margin-bottom: 30px;
+    margin-right: 25px;
+    background-color: #ebe8e5;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    
+    
+    
+}
+.card1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   margin: 10;
+   
+}
+p,h3{
+    color: black;
+}
+
+.name{
+    display: flex;
+ 
+    flex-direction: row;
+    font-weight: bold;
+}
+.names{
+    margin-left: 80px;
+}
+.quantity-no{
+    font-weight: bold;
+}
+/* Header */
+.header {
+    background-color: #f8f9fa;
+    padding:  20px  0;
+}
+
+/* Shopping Cart Items */
+.product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom:  20px;
+}
+
+.product-image {
+    width:  100px;
+    height:  100px;
+    object-fit: cover;
+    margin-right:  20px;
+}
+
+.product-details {
+    flex-grow:  1;
+}
+
+.product-title {
+    font-size:  1.2em;
+    font-weight: bold;
+}
+
+.product-size,
+.product-color {
+    font-size:  0.9em;
+    color: #6c757d;
+}
+img{
+    width: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
+   height: 70px;
+    justify-content:cover;
+    border-radius: 10px;
+    margin-top: 23px;
+}
+.product-quantity {
+    display: flex;
+    align-items: center;
+    margin-right:  20px;
+}
+
+.quantity-input {
+    width:  50px;
+    margin:  0  10px;
+}
+
+.product-price {
+    font-size:  1.2em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.remove-item {
+    color: #dc3545;
+    cursor: pointer;
+}
+
+/* Discount Code Input */
+.discount-code {
+    display: flex;
+    align-items: center;
+    margin-bottom:  20px;
+}
+
+.discount-input {
+    flex-grow:  1;
+    margin-right:  10px;
+}
+
+/* Buttons */
+.btn {
+    padding:  10px  20px;
+    border: none;
+    border-radius:  5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    padding:  20px  0;
+    text-align: center;
+}
+i{
+    background: transparent;
+    border: none;
+   
+}
+.click{
+    margin: 3px;
+    padding: 0;
+    background: none;
+    border: none;
+}
+input{
+    width: 30px;
+    
+    justify-content: center;
+}
+input text{
+    text-align: center;
+}
+.pay-proceed{
+    text-align: center;
+    background-color: greenyellow;
+}
+.head{
+    color: #333;
+    margin-top: 30px;
+}
+.products{
+    flex: 1;
+    margin-left: 30px;
+    flex-direction: row;
+    width: 200px;
+   
+}
+.order-summary{
+    position: fixed;
+    color: #333;
+    display: flex;
+    flex: 0.5;
+    flex-wrap: wrap;
+    border-color: rgb(74, 234, 66);
+    border-style: solid;
+    padding-top: 20px;
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 320px;
+    box-shadow:  0  4px  8px rgba(0,  0,  0,  0.2); 
+    overflow: auto;
+    
+}
+.text-danger{
+    background-color: #5cdc35;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    height: 30px;
+    width: 100%;
+    
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 30px;
+    font-weight: 300;
+}
+.text-danger:hover{
+    background-color: #fff;
+    border: #5cdc35;
+    border-style: solid;
+}
+
+ 
+  .quantity{
+    display: flex;
+   
+  }
+  .conn{
+    background-color:rgb(196, 223, 194);
+    margin: 20px;
+    border-radius: 10px;
+
+
+  }
+  .items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-bottom: 15px;
+
+  }
+  .pro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: 20px;
+    font-weight: bold;
+  }
+
+
+</style>
+
+        </head>
+<body>
+    <section class="h-100">
+        <div class="Logo">
+            <a href="Home Page HTML.html" class="cart">
+
+                <img src="https://i.imgur.com/oRhEAUj.jpg" alt="Er" style="margin-left: 40px;">
+
+            </a>
+        </div>
+        <div class="heading" style="margin-left: 40px;">
+            <h1 class="head" style="margin-bottom: 20px; font-family: Arial, Helvetica, sans-serif;" >Your Orders</h1>
+            
+        </div>
+            <div class="conn">
+                <div class="container-main">
+                    
+        
+                </div>
+        </div>
+    </section>
+
+    
+    <script src="orders.js">
+    </script>
+    
+    <script src="cartt.js">
+    </script>
+    
+    </body>
+    </html>

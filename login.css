@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 0.5cm;
+    font-weight: bold;
+    background-image: url('images/login.jpg'); /* Replace with the path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 3.75cm;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height:   100%;
+}
+
+.new-user-link {
+    margin-top:  10px;
+    font-size: 0.3cm;
+    text-align: left;
+}
+
+/* Container for the form */
+.container {
+    position: relative;
+    width:   35%; /* Take up half of the page width */
+    padding:   30px;
+    border:   2px solid #000000; /* Black border */
+    border-radius:   30px;
+    box-shadow:   0   0   10px rgba(0,   0,   0,   0.5);
+    color: #000000; /* Black text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top:  0;
+    left:  0;
+    right:  0;
+    bottom:  0;
+    background-color: Blue(247, 247, 248, 0.5); /* Blue background with  50% opacity */
+    z-index: -1; /* Place the pseudo-element behind the content */
+    border-radius: inherit; /* Match the border-radius of the container */
+}
+
+/* Form Styles */
+form {
+    position: relative; /* Ensure the form is above the pseudo-element */
+    z-index:  1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:   100%;
+    width:   100%;
+}
+
+/* Form Labels */
+label {
+    color: #000000; /* Black text */
+    margin-bottom:   5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:   100%;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+select {
+    width:   100%;
+    padding:   10px;
+    margin-bottom:   10px;
+    border:   1px solid #000000; /* Black border */
+    border-radius:   30px;
+    background-color: #FFFFFF; /* White background */
+    color: #0000000; /* Black text */
+}
+
+/* Form Inputs Container */
+.input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:   100%;
+    margin-bottom:   10px;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    font-size: 0.5cm;
+    font-weight: bold;
+    background-color: #007BFF; /* Blue background for the submit button */
+    color: #FFFFFF; /* White text for the submit button */
+    padding:   10px   20px;
+    border: none;
+    border-radius:   30px;
+    cursor: pointer;
+    font-size:   16px;
+    margin-top:   10px;
+}
+
+/* Submit Button on Hover */
+input[type="submit"]:hover {
+    background-color: #0056B3; /* Darker blue background for the submit button on hover */
+}
+
+/* Error Message */
+#error_message {
+    color: #FF0000; /* Red text for error messages */
+    margin-bottom:   10px;
+}
