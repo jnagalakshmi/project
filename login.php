@@ -1,7 +1,4 @@
-<?php
-// Include connection.php
-require 'connection.php';
- 
+
 // Your login.php code here
 <!DOCTYPE html>
 <html lang="en">
@@ -40,6 +37,10 @@ require 'connection.php';
     </div> 
 </body>
 </html>
+
+<?php
+// Include connection.php
+require 'connection.php';
  
 // Example usage of mysqli_real_escape_string()
 $username = mysqli_real_escape_string($conn, 'bhumi');
