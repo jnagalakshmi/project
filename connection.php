@@ -2,12 +2,12 @@
 
 //lets make a connection with Addtocart database
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db_name = "bhumi";
-
-$conn = new mysqli($servername,$username,$password,$db_name);
+$con = mysqli_init();
+mysqli_ssl_set($con,NULL,NULL, "{path to CA cert}", NULL, NULL);
+mysqli_real_connect($conn, "agroserver.mysql.database.azure.com", "bhumi", "Agriculture1234", "bhumi", 3306, MYSQLI_CLIENT_SSL);
+if (mysqli_connect_errno()) {
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
 
 if(isset($_GET["id"])){
     $product_id = $_GET["id"];
