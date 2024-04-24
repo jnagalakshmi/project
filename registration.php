@@ -23,7 +23,7 @@ $email = $_POST['email'];
  
 if ($stmt->execute()) {
     // Redirect to a success page
-    header("Location: ../project/login.php");
+    header("Location: login.php");
     exit;
 } else {
     echo "Registration failed. Error: " . $stmt->error;
@@ -33,7 +33,3 @@ $stmt->close();
 $conn->close();
 ?>
 
-has context menu
-
-
-has context menu
