@@ -42,19 +42,7 @@ ini_set('display_errors',  1);
 ini_set('display_startup_errors',  1);
 error_reporting(E_ALL);
 
-session_start(); // Start the session
-
-// Database connection parameters
-$server = "agroserver.mysql.database.azure.com";
-$userid ="bhumi";
-$Password = "Agriculture1234";
-$myDB = "bhumi";
-$con = mysqli_connect($server,$userid,$Password,$myDB);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'connection.php';
 
 
    
