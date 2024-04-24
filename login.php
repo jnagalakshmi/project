@@ -1,3 +1,36 @@
+<?php
+// Include connection.php
+require 'connection.php';
+ 
+// Your login.php code here
+ 
+// Example usage of mysqli_real_escape_string()
+$username = mysqli_real_escape_string($conn, 'bhumi');
+?>
+
+<?php
+// Initialize MySQLi
+$conn = mysqli_init();
+ 
+// Connect to MySQL server with SSL/TLS
+mysqli_real_connect(
+    $conn,
+    "agroserver.mysql.database.azure.com",
+    "bhumi",
+    "Agriculture1234",
+    "bhumi",
+    3306,
+    NULL, // No flags
+    MYSQLI_CLIENT_SSL // Use SSL/TLS
+);
+ 
+// Check connection
+if (mysqli_connect_errno()) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
