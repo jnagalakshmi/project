@@ -4,10 +4,32 @@
 
 
 
-$con = mysqli_init();
-mysqli_ssl_set($con,NULL,NULL, "{path to CA cert}", NULL, NULL);
-mysqli_real_connect($conn, "agroserver.mysql.database.azure.com", "bhumi", "Agriculture1234", "bhumi", 3306, MYSQLI_CLIENT_SSL);
+// $con = mysqli_init();
+// mysqli_ssl_set($con,NULL,NULL, "{path to CA cert}", NULL, NULL);
+// mysqli_real_connect($conn, "agroserver.mysql.database.azure.com", "bhumi", "Agriculture1234", "bhumi", 3306, MYSQLI_CLIENT_SSL);
 
+
+$mysqli = new mysqli('agroserver.mysql.database.azure.com', 'bhumi', 'Agriculture1234', 'bhumi');
+ 
+// Check connection
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+}
+ 
+// Set up SSL options
+//$mysqli->ssl_set('path_to_client_key.pem', 'path_to_client_cert.pem', 'path_to_ca_cert.pem', NULL, NULL);
+ 
+// Attempt to connect with SSL
+$mysqli->real_connect('agroserver.mysql.database.azure.com', 'bhumi', 'Agriculture1234', 'bhumi');
+ 
+// Check connection
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+}
+ 
+echo "Connected successfully";
+ 
+// Now you can proceed with your database queries
 
 
 if(isset($_GET["id"])){
