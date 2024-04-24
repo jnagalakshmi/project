@@ -10,8 +10,8 @@ include 'connection.php';
 // Check if the form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get username and password from the form
-    $username = $mysqli -> real_escape_string($conn,$_POST['username']);
-    $password = $mysqli -> real_escape_string($conn,$_POST['password']);
+    $username = $mysqli_real_escape_string($conn,$_POST['username']);
+    $password = $mysqli_real_escape_string($conn,$_POST['password']);
  
     // Query to check if the username and password exist in the database
     $sql = "SELECT * FROM users WHERE username = '$username' and password = '$password'";
