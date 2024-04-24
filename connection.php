@@ -2,9 +2,14 @@
 
 //lets make a connection with Addtocart database
 
-$con = mysqli_init();
-mysqli_ssl_set($con,NULL,NULL, "{path to CA cert}", NULL, NULL);
-mysqli_real_connect($conn, "agroserver.mysql.database.azure.com", "bhumi", "Agriculture1234", "bhumi", 3306, MYSQLI_CLIENT_SSL);
+
+
+$server = "agroserver.mysql.database.azure.com";
+$userid ="bhumi";
+$Password = "Agriculture1234";
+$myDB = "bhumi";
+$con = mysqli_connect($server,$userid,$Password,$myDB);
+
 if (mysqli_connect_errno()) {
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
