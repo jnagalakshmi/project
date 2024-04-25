@@ -31,40 +31,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
  echo "error  username : $username  password : $password";}
 ?>
  
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Log In</title>
-<link rel="stylesheet" href="login1.css">
-</head>
-<body>
-<div class="main">
-<div class="container">
-<div class="heading">Sign In</div>
-<form class="form" action="login.php" method="post">
-<input
-                    placeholder="E-mail"
-                    id="username"
-                    name="username"
-                    type="username"
-                    class="input"
-                    required=""
-                />
-<input
-                    placeholder="Password"
-                    id="password"
-                    name="password"
-                    type="password"
-                    class="input"
-                    required=""
-                />
-<span class="forgot-password"><a href="#">Forgot Password ?</a></span>
-<input value="Sign In" type="submit" class="login-button" />
-</form>
-<span class="agreement"><a href="regis1.html">Don't have an account</a></span>
-</div>
-</div> 
-</body>
-</html>
+
