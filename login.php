@@ -28,7 +28,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Your Login Name or Password is invalid";
     }
 }else{
- echo "error";}
+ echo "error  username : $username  password : $password";}
 ?>
  
 <!DOCTYPE html>
