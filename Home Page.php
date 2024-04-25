@@ -184,7 +184,7 @@ if (isset($_SESSION['username'])) {
                     
                     <!--box---------------->
                     <a class="category-box" href="Dairy.html" target="_blank">
-                        <img alt="Baby Care Products" src="uploads/dairy.png">
+                        <img alt="Baby Care Products" src="dairy.png">
                         <span>Dairy Products</span>
                     </a>
                     <!--box---------------->
