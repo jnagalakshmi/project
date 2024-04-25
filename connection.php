@@ -4,11 +4,11 @@
 
 
 // Initialize MySQLi
-$con = mysqli_init();
+$conn = mysqli_init();
  
 // Connect to MySQL server without SSL/TLS
 mysqli_real_connect(
-    $con,
+    $conn,
     "agroserver.mysql.database.azure.com",
     "bhumi",
     "Agriculture1234",
