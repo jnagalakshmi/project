@@ -32,7 +32,7 @@ function orderSummaryRender() {
                     <p class="quantity-no">${cartItem.quantity}</p>
                     </div>
                     <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                    <h3 class="product-price">$ ${matchingProduct.priceCents}</h3>
+                    <h3 class="product-price"><i class="fa-solid fa-indian-rupee-sign"></i> ${matchingProduct.priceCents}</h3>
                     </div>
                     <div class="button-delete">
                     <button class="text-danger" data-quant-ty="${cartItem.quantity}" onclick=" window.location.href='cart.html';"   data-product-id=${matchingProduct.id} ><i class="fas fa-trash fa-lg " ></i></button>
