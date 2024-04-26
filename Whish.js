@@ -98,6 +98,9 @@ function orderSummary() {
                             <div>Total Cost</div>
                             <div class="payment-summary-money">${Tprice}</div>
                         </div>
+                        <button class="move-to-cart" onclick='orderList()'>
+                            Move to Cart
+                          </button>
             `;
   document.querySelector(".order-summary").innerHTML = paymentSummaryHtml;
 }
