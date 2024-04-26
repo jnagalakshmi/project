@@ -1,0 +1,41 @@
+/* Reset some default styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-image: url(uploads/19603.jpg);
+  background-size: cover; /* This will make sure the image covers the entire area of the .main class */
+  background-position: center; /* This will center the image */
+  background-repeat: no-repeat;
+}
+
+/* Container for the chatbot iframe */
+.chatbot-container {
+  display: flex;
+  justify-content: flex-end; /* Align container to the right */
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  /* Light yellow, resembling sunlight */
+  margin-right: 50px;
+  border: none; /* Adjust this value as needed */
+}
+
+/* Styling for the iframe */
+iframe {
+  border: none; /* Remove default iframe border */
+  box-shadow: 0 4px 8px rgba(132, 128, 128, 0.1);
+  width: 50%; /* Add a subtle shadow for depth */
+}
+
+/* Optional: Add a title or header above the chatbot */
+.chatbot-header {
+  text-align: center;
+  margin-top: 10px;
+  color: #8b4513; /* Saddle brown, a common color in agriculture */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.webchat__basic-transcript {
+  background-color: red;
+}
