@@ -19,7 +19,8 @@ if (isset($_SESSION['username'])) {
     $conn->close();
 } else {
     // Redirect to the login page if the user is not logged in
-    header('Location: login.php');
+   // header('Location: login.php');
+    header('Location: ../Home Page.html');
     exit;
 }
 ?>
