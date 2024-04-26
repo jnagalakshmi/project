@@ -5,6 +5,7 @@ ini_set('display_startup_errors',  1);
 error_reporting(E_ALL);
  
 // Include connection.php
+ob_start();
 include 'connection.php';
  
 // Check if the form is submitted
@@ -24,6 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
       // echo"Welcome";
       $_SESSION['username']=$username;
       echo "$username";
+      ob_clean();
       header("Location: ../HomePage1.php");
    } else {
         echo "Your Login Name or Password is invalid";
