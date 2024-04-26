@@ -22,6 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     // If user exists, set session and redirect to home page
      if($count == 1) {
       // echo"Welcome";
+      session_start();
       $_SESSION['username']=$username;
       //echo "$username";
     
