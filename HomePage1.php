@@ -361,7 +361,7 @@ if (($_SESSION['username'])) {
                         <li><a href="#">Email : Bhumi@gmail.com</a></li>
                         <li><a href="#">Cities we serve</a></li>
                     </ul>
-                    <br><p style="color: aliceblue;">Copyright ©2022 | All Rights Reserved</p>
+                    <br><p style="color: aliceblue;">Copyright ©2024 | All Rights Reserved</p>
                 </div>
                 </div>
             </footer>
