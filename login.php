@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
      if($count == 1) {
       // echo"Welcome";
       $_SESSION['username']=$username;
-      header("Location: ../project/Home Page.php");
+      header("Location: ../project/HomePage.php");
    } else {
         echo "Your Login Name or Password is invalid";
     }
