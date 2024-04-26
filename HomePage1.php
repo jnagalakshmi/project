@@ -20,7 +20,7 @@ if (isset($_SESSION['username'])) {
 } else {
     // Redirect to the login page if the user is not logged in
    // header('Location: login.php');
-    header('Location: ../Home Page.html');
+    header('Location: ../login.html');
     exit;
 }
 ?>
