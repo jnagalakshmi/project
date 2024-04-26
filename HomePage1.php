@@ -1,7 +1,7 @@
 <?php
 // Start the session
 session_start();
-
+echo "$username";
 // Check if the user is logged in
 if (isset($_SESSION['username'])) {
     // Include your database connection file
