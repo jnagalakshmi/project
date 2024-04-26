@@ -1,11 +1,12 @@
 <?php
 // Start the session
+include 'connection.php';
 session_start();
 echo "$username";
 // Check if the user is logged in
 if (($_SESSION['username'])) {
     // Include your database connection file
-    include 'connection.php';
+    
 
     // Prepare an SQL statement to get user details
     $stmt = $conn->prepare("SELECT username, number, email FROM users WHERE username = ?");
@@ -20,6 +21,7 @@ if (($_SESSION['username'])) {
 } else {
     // Redirect to the login page if the user is not logged in
    // header('Location: login.php');
+    echo "no username";
     header('Location: ../login.html');
     exit;
 }
