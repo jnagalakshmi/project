@@ -23,7 +23,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
      if($count == 1) {
       echo "login successful";
       $_SESSION['username']=$username;
-        header('Location:HomePage1.php');
+        //header('Location:HomePage1.php');
+      echo'<script>window.location='HomePage1.php';</script>";'
      
      
         exit(); // It's good practice to exit after redirection to prevent further execution
