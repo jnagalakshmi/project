@@ -4,7 +4,7 @@ html {
   margin: 0;
   padding: 0;
   font-family: "Arial", sans-serif;
-  background-image: url(uploads/19603.jpg);
+  background-image: url(19603.jpg);
   background-size: cover; /* This will make sure the image covers the entire area of the .main class */
   background-position: center; /* This will center the image */
   background-repeat: no-repeat;
