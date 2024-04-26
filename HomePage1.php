@@ -148,6 +148,7 @@ if (($_SESSION['username'])) {
                             </div>
                             <a href="orders.html" target="_blank">Orders</a>
                             <a href="index.html">Logout</a>
+                              <a href="chatbot.html">Support</a>
                           </div>
                         
                       </div>
