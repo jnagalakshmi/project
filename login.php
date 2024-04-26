@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     // If user exists, set session and redirect to home page
     if($count == 1) {
         $_SESSION['username']=$username;
-        header('Location: agri-e-commerce-bhumi.azurewebsites.net');
+        header('Location: Home Page.php');
      //echo "login successful";
      
         exit(); // It's good practice to exit after redirection to prevent further execution
