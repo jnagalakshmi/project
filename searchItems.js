@@ -23,7 +23,7 @@ document.querySelector(".search-btn").addEventListener("click", (event) => {
 function performSearch(query) {
   productsHTML = ``;
   product.forEach((searchItem) => {
-    if (query === searchItem.name.toLowerCase()) {
+    if (query === searchItem.name.toLowerCase() ||  query === searchItem.category.toLowerCase()) {
       productsHTML += `
               <div class="product-box">
             
