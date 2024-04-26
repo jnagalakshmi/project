@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     // If user exists, set session and redirect to home page
     if($count == 1) {
         $_SESSION['username']=$username;
-        header('Location: HomePage1.php');
+        header('Location:HomePage1.php');
      //echo "login successful";
      
         exit(); // It's good practice to exit after redirection to prevent further execution
