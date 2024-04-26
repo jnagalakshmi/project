@@ -98,9 +98,41 @@ function orderSummary() {
                             <div>Total Cost</div>
                             <div class="payment-summary-money">${Tprice}</div>
                         </div>
-                        <button class="move-to-cart" onclick='orderList()'>
+                        <button class="move-to-cart" onclick='addWishlistToCart()'>
                             Move to Cart
                           </button>
             `;
   document.querySelector(".order-summary").innerHTML = paymentSummaryHtml;
+}
+
+function addWishlistToCart() {
+ // Retrieve the current cart and wishlist from local storage
+ let cartt = JSON.parse(localStorage.getItem("cart")) || [];
+ let Whish = JSON.parse(localStorage.getItem("Whishcart")) || [];
+
+ // Iterate over each item in the wishlist
+ Whish.forEach(wishItem => {
+    // Check if the item is already in the cart
+    const existingCartItem = cartt.find(cartItem => cartItem.productId === wishItem.productId);
+
+    if (existingCartItem) {
+      // If the item is already in the cart, increase its quantity
+      existingCartItem.quantity += wishItem.quantity;
+    } else {
+      // If the item is not in the cart, add it
+      cartt.push({
+        productId: wishItem.productId,
+        quantity: wishItem.quantity
+      });
+    }
+ });
+
+ // Update the local storage with the new cart array
+ localStorage.setItem("cart", JSON.stringify(cartt));
+
+ // Optionally, clear the wishlist after adding items to the cart
+ localStorage.setItem("Whishcart", JSON.stringify([]));
+
+ // Optionally, refresh the page or update the UI to reflect the changes
+ window.location.reload();
 }
