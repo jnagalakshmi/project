@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
      if($count == 1) {
       // echo"Welcome";
       $_SESSION['username']=$username;
-      echo "$username";
+      //echo "$username";
     
       header("Location: ../HomePage1.php");
    } else {
