@@ -134,5 +134,5 @@ function addWishlistToCart() {
  localStorage.setItem("Whishcart", JSON.stringify([]));
 
  // Optionally, refresh the page or update the UI to reflect the changes
- window.location.reload();
+ window.location.cart.html();
 }
