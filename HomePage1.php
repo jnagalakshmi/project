@@ -10,7 +10,7 @@ if (($_SESSION['username'])) {
 
     // Prepare an SQL statement to get user details
     $stmt = $conn->prepare("SELECT username, number, email FROM users WHERE username = ?");
-    $stmt->bind_param("i", $_SESSION['username']);
+    $stmt->bind_param("s", $_SESSION['username']);
     $stmt->execute();
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
