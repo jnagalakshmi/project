@@ -113,7 +113,14 @@ function addWishlistToCart() {
  // Iterate over each item in the wishlist
  Whish.forEach(wishItem => {
     // Check if the item is already in the cart
+if (Whish.length === 0) {
+    // Display a message indicating that there are no items to add
+    alert("Your wishlist is empty. There are no items to add to the car.");
+    return; // Exit the function early
+ }
+   
     const existingCartItem = cartt.find(cartItem => cartItem.productId === wishItem.productId);
+   
 
     if (existingCartItem) {
       // If the item is already in the cart, increase its quantity
