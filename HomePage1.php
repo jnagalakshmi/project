@@ -107,7 +107,7 @@ if (($_SESSION['username'])) {
                 
     
                     <!--like----->
-                    <a href="Wishlist.html" target="_blank" class="like">
+                    <a href="Wishlist.html"  class="like">
     
                         <i class="fas fa-heart"></i>
     
@@ -120,7 +120,7 @@ if (($_SESSION['username'])) {
                     </a>
     
                     <!--cart----->
-                    <a href="cart.html" class="cart" target="_blank">
+                    <a href="cart.html" class="cart">
     
                         <i class="fas fa-shopping-cart"></i>
                         
@@ -146,7 +146,7 @@ if (($_SESSION['username'])) {
                                 <p><?php echo htmlspecialchars($user['email']); ?></p>
                                 <button>Edit</button>
                             </div>
-                            <a href="orders.html" target="_blank">Orders</a>
+                            <a href="orders.html" >Orders</a>
                             <a href="index.html">Logout</a>
                               <a href="chatbot.html">Support</a>
                           </div>
