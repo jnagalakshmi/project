@@ -19,6 +19,18 @@ document.getElementById("card").addEventListener("change", function () {
   document.getElementById("card-details").style.display = "block";
 });
 
+
+let orders = [];
+console.log(orders);
+window.onload = function () {
+  const storedOrders = localStorage.getItem("orders");
+  if (storedOrders) {
+    orders = JSON.parse(storedOrders);
+  } else {
+    orders = []; // Initialize an empty array if nothing is stored
+  }
+};
+
 function orderList() {
   let matchingProduct;
   let neworder = [];
