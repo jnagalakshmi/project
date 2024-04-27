@@ -199,7 +199,7 @@ function orderList() {
   });
   orders.unshift(neworder);
   console.log(orders);
-  localStorage.removeItem("cart");
+  localStorage.removeItem("cartt");
   localStorage.setItem("orders", JSON.stringify(orders));
   window.location.href = 'orders.html';
 }
