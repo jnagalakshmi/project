@@ -139,6 +139,29 @@ function orderSummary() {
   document.querySelector(".order-summary").innerHTML = paymentSummaryHtml;
 }
 
+document
+  .querySelector("#cash-on-delivery")
+  .addEventListener("change", updateButton);
+document
+  .querySelector("#online-payment")
+  .addEventListener("change", updateButton);
+
+function updateButton() {
+  if (document.querySelector("#online-payment").checked) {
+    document.querySelector(".place-order-button").textContent =
+      "Confirm Payment";
+    document.querySelector(".place-order-button").onclick = function () {
+      window.location.href = "payment.html"; // Redirect to payment page
+    };
+  } else {
+    document.querySelector(".place-order-button").textContent =
+      "Place your order";
+    document.querySelector(".place-order-button").onclick = function () {
+      orderList(); // Call the orderList function
+    };
+  }
+}
+
 let orders = [];
 console.log(orders);
 window.onload = function () {
