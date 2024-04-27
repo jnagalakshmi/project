@@ -46,7 +46,7 @@ function orderList() {
   orders.unshift(neworder);
   console.log(orders);
   localStorage.setItem("orders", JSON.stringify(orders));
-
+   localStorage.removeItem("cart");
   localStorage.setItem("cart", JSON.stringify([]));
   window.location.href = "orders.html";
 }
