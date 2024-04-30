@@ -23,7 +23,7 @@ $email = $_POST['email'];
  
 if ($stmt->execute()) {
     // Redirect to a success page
-    header("Location: login.html");
+    header("Location:login.html");
     exit;
 } else {
     echo "Registration failed. Error: " . $stmt->error;
