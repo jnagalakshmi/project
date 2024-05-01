@@ -1,8 +1,8 @@
 let cartt = JSON.parse(localStorage.getItem("cart")) || [];
-console.log(cartt);
+
 
 let product = JSON.parse(localStorage.getItem("products")) || [];
-console.log(product);
+
 
 document
   .getElementById("payment-form")
