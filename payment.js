@@ -57,14 +57,11 @@ function orderList() {
       quantity: quantity,
     });
   });
-   let message = "";
-  neworder.foreach((item) => {
-    message += `${item.name}: ${item.quantity}\n`;
-  });
+  
   orders.unshift(neworder);
   console.log(orders);
   localStorage.setItem("orders", JSON.stringify(orders));
    cart=[];
   localStorage.setItem("cart", JSON.stringify([]));
-  //window.location.href = "orders.html";
+  window.location.href = "orders.html";
 }
