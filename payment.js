@@ -66,5 +66,5 @@ function orderList() {
   localStorage.setItem("orders", JSON.stringify(orders));
    cart=[];
   localStorage.setItem("cart", JSON.stringify([]));
-  window.location.href = "orders.html";
+  //window.location.href = "orders.html";
 }
