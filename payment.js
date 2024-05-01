@@ -57,6 +57,10 @@ function orderList() {
       quantity: quantity,
     });
   });
+   let message = "";
+  neworder.foreach((item) => {
+    message += `${item.name}: ${item.quantity}\n`;
+  });
   orders.unshift(neworder);
   console.log(orders);
   localStorage.setItem("orders", JSON.stringify(orders));
