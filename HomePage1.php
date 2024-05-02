@@ -338,7 +338,7 @@ if (($_SESSION['username'])) {
                 <h1>Customer Feedback</h1>
             </div>
             <div class="feedback-container">
-                <img src="uploads/bg1.jpg" alt="Feedback Image" class="feedback-image">
+                <img src="bg1.jpg" alt="Feedback Image" class="feedback-image">
                 <section id="feedback-form">
                     
                     <!--form-container------->
