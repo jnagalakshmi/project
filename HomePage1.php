@@ -60,6 +60,15 @@ if (($_SESSION['username'])) {
     
         <script src = 'Home Page JS.js' defer></script>
         <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
+
+            </script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "kqCVWmySOHhCV2zqN",
+      });
+   })();
+</script>
             
        <link rel="shortcut icon" type="image/jpg" href="C:\Users\hp\Desktop\College\First Semester\Introduction To Web Technologies\Notepad ++ Files\Project\favicon.ico"/>
     
@@ -319,6 +328,52 @@ if (($_SESSION['username'])) {
                     </div>
                 </div>
             </section>
+
+
+                        <!--==Feedback Form=======================================-->
+
+
+            <section id="feed-back">
+            <div class="feedback-heading">
+                <h1>Customer Feedback</h1>
+            </div>
+            <div class="feedback-container">
+                <img src="uploads/bg1.jpg" alt="Feedback Image" class="feedback-image">
+                <section id="feedback-form">
+                    
+                    <!--form-container------->
+                    <div class="feedback-form-container">
+                        <div class="col-md-6 border-left py-3">
+                            <div class="form-group">
+                              <h3 for="name">Name</h3>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="name"
+                                placeholder="Enter name"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <h3 for="email">Email</h3>
+                              <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                placeholder="Enter email"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <h3 for="message">Message</h3>
+                              <textarea class="form-control" id="message" rows="3"></textarea>
+                            </div>
+                            <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+                          </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </section>
          
             <!--==Footer=============================================-->
             <footer>
