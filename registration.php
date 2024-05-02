@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Include connection.php
 include 'connection.php';
  
