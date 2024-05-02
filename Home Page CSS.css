@@ -677,6 +677,93 @@ body {
   object-fit: cover;
   object-position: center;
 }
+
+
+
+#feed-back {
+  background-color: rgb(236, 247, 238);
+  margin: 13px;
+  padding: 10px;
+}
+
+/* Feedback Form Container */
+.feedback-container {
+  display: flex;
+  justify-content: space-between; /*justify-content: space-between;*/
+  align-items: flex-start; /* Align items to the top */
+  margin-top: 20px; /* Add some space above the container */
+}
+
+.feedback-image {
+  width: 40%; /* Adjust the width as needed */
+  height: 500px; /* Maintain aspect ratio */
+  margin-left: 10px; /* Add some space between the image and the form */
+}
+
+/* Adjust the Feedback Form Container */
+#feedback-form {
+  width: 55%; /* Adjust the width as needed */
+  background-color: rgb(116, 216, 139);
+  height: 500px;
+  padding: 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Feedback Form Heading */
+.feedback-heading {
+  text-align: center;
+
+  font-size: x-large;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Labels */
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Input Fields */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  margin: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+/* Submit Button */
+.btn {
+  background-color: #f7fff7;
+  color: rgb(17, 181, 28);
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn:hover {
+  background-color: #5aca69;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
 /* footer */
 footer {
   background-color: #1b1d1f;
